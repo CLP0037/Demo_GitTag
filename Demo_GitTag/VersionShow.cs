@@ -27,6 +27,7 @@ namespace Demo_GitTag
                 label1.Text = "";
                 label2.Text = "";
                 label3.Text = "";
+                label5.Text = "";
 
                 Assembly asm = Assembly.GetExecutingAssembly();
                 FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(asm.Location);
@@ -36,6 +37,8 @@ namespace Demo_GitTag
                 label3.Text = "ProductVersion：" + fvi.ProductVersion;
                 if (fvi.ProductVersion.Contains("Modified"))
                     label3.ForeColor = Color.Red;
+
+                label5.Text = DateTime.Now.ToShortDateString();
             }
             catch
             {
